@@ -1,0 +1,50 @@
+@import url(fonts.css);
+body{
+    display: grid;
+    justify-content: center;
+}
+main{
+    display: grid;
+    max-width: 1160px;
+}
+/** Travail de couleur sur le Header, Aside et Footer  **/
+header,aside,footer{
+    background-color: rgb(78,22,21);
+    color: white;
+}
+
+/** Centrage du texte dans le Header  **/
+header{
+    text-align: center;
+}
+
+/** Réglage de l'image du header **/
+header > img{
+    
+    border-radius: 50%;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    margin: 22px 0 ;
+}
+
+/** Réglages param de address  **/
+address{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #2c1d27;
+    padding: 22px;
+}
+
+/** Réglages couleur lien a dans adresse  **/
+address a {
+    color: white;
+    text-decoration: none;
+}
+/** Ajout de la font Family Lato-bold dans le H1 **/
+h1{
+    font-family: "Lato-bold", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
