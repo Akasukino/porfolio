@@ -1,3 +1,4 @@
+/** Ajouts des polices dans le projet  **/
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
 @font-face {
     font-family: 'Raleway';
@@ -21,6 +22,7 @@
             url(../fonts/Raleway/Raleway-LightItalic.otf) format('opentype');
 }
 
+/** Ajouts de polices dans la page web  **/
 h1,h2,h3,h4{
     font-family: "Lato", sans-serif;
     font-weight: 700;
@@ -29,6 +31,33 @@ h1,h2,h3,h4{
 p, li, small, a {
     font-family: "Raleway", serif;
 }
+
+/** Travail de couleur sur le Header, Aside et Footer  **/
+header,aside,footer{
+    background-color: rgb(78,22,21);
+    color: white;
+}
+/*********************************************** Tête de la page web   *************************************************/
+/** Centrage du texte dans le Header  **/
+header{
+    text-align: center;
+    grid-area: head;
+}
+
+/** Réglage de l'image du header **/
+header img{
+    cursor: zoom-in;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+    margin-top: 30px;
+}
+header h2{
+    margin-bottom: 50px;
+}
+/*********************************************** Corps de la page web   *************************************************/
+/** création du grid dans le body  **/
 body{
     margin: 0 auto;
     display: grid;
@@ -36,31 +65,17 @@ body{
 }
 main{
     display: grid;
-    grid-template:
-    "a a" 1000px / 325px;
+    width: 100%;
+    height: 100%;
+    grid-template-areas:
+    "head head"
+    "aside main"
+    "aside foot";
+    grid-template-rows: max-content 1fr 100px;
+    grid-template-columns: 350px 1fr;
     max-width: 1160px;
     min-width: 1160px;
     border-right: 1px solid black;
-}
-/** Travail de couleur sur le Header, Aside et Footer  **/
-header,aside,footer{
-    background-color: rgb(78,22,21);
-    color: white;
-}
-
-/** Centrage du texte dans le Header  **/
-header{
-    text-align: center;
-}
-
-/** Réglage de l'image du header **/
-header > img{
-    
-    border-radius: 50%;
-    object-fit: cover;
-    width: 150px;
-    height: 150px;
-    margin: 22px 0 ;
 }
 
 /** Réglages param de address  **/
@@ -77,14 +92,24 @@ address a {
     color: white;
     text-decoration: none;
 }
+address a:hover{
+    text-decoration: underline;
+}
 
 /** Ajout de la font Family Lato-bold dans le H1 **/
 h3{
+    padding-left: 5px;
     background-color: #dbc2a4;
+    border-left:5px solid #6D071A;;
     color: black;
 }
+section h3:hover{
+    background-color:#6D071A;
+}
+
 aside{
     padding: 0 40px 0 0;
+    grid-area: aside;
 }
 aside h3 {
     padding:0 10px;
@@ -93,9 +118,22 @@ aside p {
     margin: 10px 30px;
     text-indent: 25px;
 }
-footer img {
-    width: 40px;
-}
+
 section{
     margin: 0 0 0 20px;
+}
+/*********************************************** Pied de la page web   *************************************************/
+footer{
+    grid-area: foot;
+    text-align: center;
+}
+footer small{
+    display: block;
+}
+footer img {
+    width: 40px;
+    margin: 10px;
+}
+footer img:hover{
+    opacity: 0.5;
 }
