@@ -1,11 +1,15 @@
 @import url(fonts.css);
 body{
+    margin: 0 auto;
     display: grid;
     justify-content: center;
 }
 main{
     display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 300px 1fr;
     max-width: 1160px;
+    min-width: 1160px;
 }
 /** Travail de couleur sur le Header, Aside et Footer  **/
 header,aside,footer{
@@ -42,9 +46,14 @@ address a {
     color: white;
     text-decoration: none;
 }
+
 /** Ajout de la font Family Lato-bold dans le H1 **/
 h1{
     font-family: "Lato-bold", sans-serif;
     font-weight: 700;
     font-style: normal;
+}
+h3{
+    background-color: #dbc2a4;
+    color: black;
 }
