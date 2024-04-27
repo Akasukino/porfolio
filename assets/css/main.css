@@ -1,4 +1,34 @@
-@import url(fonts.css);
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+@font-face {
+    font-family: 'Raleway';
+        src: url(../fonts/Raleway/Raleway-Light.woff);
+        src: 
+            url(../fonts/Raleway/Raleway-Light.ttf) format('truetype'),
+            url(../fonts/Raleway/Raleway-Light.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Raleway-bold';
+        src: url(../fonts/Raleway/Raleway-Bold.woff);
+        src: 
+            url(../fonts/Raleway/Raleway-Bold.ttf) format('truetype'),
+            url(../fonts/Raleway/Raleway-Bold.otf) format('opentype');
+}
+@font-face {
+    font-family: 'Raleway-italic';
+        src: url(../fonts/Raleway/Raleway-LightItalic.woff);
+        src: 
+            url(../fonts/Raleway/Raleway-LightItalic.ttf) format('truetype'),
+            url(../fonts/Raleway/Raleway-LightItalic.otf) format('opentype');
+}
+
+h1,h2,h3,h4{
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+p, li, small, a {
+    font-family: "Raleway", serif;
+}
 body{
     margin: 0 auto;
     display: grid;
@@ -6,10 +36,11 @@ body{
 }
 main{
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 300px 1fr;
+    grid-template:
+    "a a" 1000px / 325px;
     max-width: 1160px;
     min-width: 1160px;
+    border-right: 1px solid black;
 }
 /** Travail de couleur sur le Header, Aside et Footer  **/
 header,aside,footer{
@@ -48,12 +79,23 @@ address a {
 }
 
 /** Ajout de la font Family Lato-bold dans le H1 **/
-h1{
-    font-family: "Lato-bold", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-}
 h3{
     background-color: #dbc2a4;
     color: black;
+}
+aside{
+    padding: 0 40px 0 0;
+}
+aside h3 {
+    padding:0 10px;
+}
+aside p {
+    margin: 10px 30px;
+    text-indent: 25px;
+}
+footer img {
+    width: 40px;
+}
+section{
+    margin: 0 0 0 20px;
 }
