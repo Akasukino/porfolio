@@ -23,7 +23,7 @@
 }
 
 /** Ajouts de polices dans la page web  **/
-h1,h2,h3,h4{
+h1,h2,h3{
     font-family: "Lato", sans-serif;
     font-weight: 700;
     font-style: normal;
@@ -54,17 +54,19 @@ header img{
     height: 150px;
     margin-top: 30px;
 }
-header h2{
+header h1{
     margin-bottom: 50px;
+}
+header p{
+    font-size: 1.8em;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 /*********************************************** Corps de la page web   *************************************************/
 /** création du grid dans le body  **/
 body{
     margin: 0 auto;
-    display: grid;
-    justify-content: center;
-}
-main{
     display: grid;
     width: 100%;
     height: 100%;
@@ -78,7 +80,9 @@ main{
     min-width: 1160px;
     border-right: 1px solid black;
 }
-
+main{
+    grid-area: main;
+}
 /** Réglages param de address  **/
 address{
     display: flex;
@@ -98,21 +102,23 @@ address a:hover{
 }
 
 /** Ajout de la font Family Lato-bold dans le H1 **/
-h3{
+h2{
     padding-left: 5px;
     background-color: #dbc2a4;
     border-left:5px solid #6D071A;;
     color: black;
 }
-section h3:hover{
-    background-color:#6D071A;
+
+section h2:hover{
+    border-right: 5px solid #6D071A;
 }
 
+/** Parti Aside  **/
 aside{
     padding: 0 40px 0 0;
     grid-area: aside;
 }
-aside h3 {
+aside h2 {
     padding:0 10px;
 }
 aside p {
@@ -120,13 +126,15 @@ aside p {
     text-indent: 25px;
 }
 
+/** Parti Section  **/
 section{
-    margin: 0 0 0 20px;
+    margin: 0 20px 0 20px;
 }
+
 /*********************************************** Pied de la page web   *************************************************/
 footer{
-    grid-area: foot;
     text-align: center;
+    grid-area:foot;
 }
 footer small{
     display: block;
